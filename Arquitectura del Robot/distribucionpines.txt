@@ -5,16 +5,16 @@ DHT11 ----> D2
 BUZZER ----> A0
 
 HCSR04 DELANTERO
-TRIGGER ---->
-ECHO ---->
+TRIGGER ----> 6
+ECHO ----> 5
 
 HCSR04 IZQUIERDO
-TRIGGER ----> 
-ECHO ---->
+TRIGGER ----> 8 
+ECHO ----> 7
 
 HCSR04 DERECHO
-TRIGGER ---->
-ECHO ----->
+TRIGGER ----> 4
+ECHO -----> 3
 
 LED ---->D13
 

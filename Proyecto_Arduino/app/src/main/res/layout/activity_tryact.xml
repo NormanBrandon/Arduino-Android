@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tryact">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/logo2" />
+
+    <Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/btn_remote"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_back2"
+
+        android:hint="Control Remoto"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+        android:textSize="40px"
+
+
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="293dp"
+        />
+
+    <Button
+        android:id="@+id/btn_follow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_back2"
+        android:hint="Seguimiento de luz"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+        android:textSize="40px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <Button
+        android:id="@+id/btn_auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_back2"
+        android:hint="Piloto Automático"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+        android:textSize="40px"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <Button
+        android:id="@+id/btn_drive"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_back2"
+        android:hint="Conducción"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+        android:textSize="40px"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="174dp" />
+</android.support.constraint.ConstraintLayout>

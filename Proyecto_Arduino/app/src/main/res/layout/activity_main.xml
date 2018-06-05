@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper_main"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_conn"
+        android:layout_width="299dp"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp"
+        android:layout_x="7dp"
+        android:layout_y="421dp"
+        android:hint="Conectar a dispositivo"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorbuttontext"
+        android:textSize="45px"
+        tools:background="@drawable/button_back2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        app:srcCompat="@drawable/logo2" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="82dp"
+        android:text="Iniciar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="21dp" />
+
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>

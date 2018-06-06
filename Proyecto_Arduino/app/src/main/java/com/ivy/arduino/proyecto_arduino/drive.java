@@ -15,6 +15,30 @@ public class drive extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_drive );
         Button btn_conn = (Button)findViewById ( R.id.btn_backdriv );
+        Button h1 = (Button)findViewById ( R.id.btn_driv_horn1 );
+        Button h2 = (Button)findViewById ( R.id.btn_driv_horn2 );
+        Button h3 = (Button)findViewById ( R.id.btn_driv_horn3 );
+
+        h1.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                horn1();
+            }
+        } );
+
+        h1.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                horn2();
+            }
+        } );
+
+        h2.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                horn3();
+            }
+        } );
 
         btn_conn.setOnClickListener ( new View.OnClickListener () {
             @Override
@@ -22,6 +46,19 @@ public class drive extends AppCompatActivity {
                 back();
             }
         } );
+
+    }
+
+    public void horn2() {
+        //le manda al arduino una sola nota / sonido
+    }
+
+    public void horn3() {
+        //manda una tonada al arduino
+    }
+
+    public void horn1() {
+        //manda una mentada xd
     }
 
     public void back() {

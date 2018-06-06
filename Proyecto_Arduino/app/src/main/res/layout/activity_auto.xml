@@ -7,6 +7,54 @@
     android:background="@drawable/wallpaper_aut"
     tools:context=".act_auto">
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="340dp"
+        android:layout_height="27dp"
+        android:alpha=".8"
+        android:text="Sensor Y , DATOS"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706"
+        tools:background="@drawable/text_back_blue"
+        tools:ignore="MissingConstraints"
+        tools:text="Ajustar  distancia del sensor" />
+
+    <SeekBar
+        android:id="@+id/bar_auto_distance"
+        android:layout_width="296dp"
+        android:layout_height="25dp"
+        android:background="@drawable/seekbar_background4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596"
+        tools:background="@drawable/seekbar_background"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="362dp"
+        android:layout_height="42dp"
+        android:alpha=".8"
+        android:text="Sensor Y , DATOS"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471"
+        tools:background="@drawable/text_back_blue"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="172dp"
@@ -20,23 +68,23 @@
 
     <Button
         android:id="@+id/btn_backauto"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_width="58dp"
+        android:layout_height="31dp"
         android:layout_marginBottom="16dp"
 
-        android:background="@drawable/button_back2"
-        android:hint="Salir"
+        android:alpha=".8"
+        android:background="@drawable/button_back_back"
         android:textColor="@color/colorbuttontext"
+
         android:textColorHint="@color/colorbuttontext"
 
         android:textSize="40px"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     private Set pairedDevices;
     ListView devicelist;
-
+    Boolean connected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                 startbt();
                 showpaired();
                 scandevices();
-
             }
         } );
 
@@ -86,9 +85,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startbt() {
-        if (!mBluetoothAdapter.isEnabled()) {
-            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+
+        if (mBluetoothAdapter == null) {
+            Context context = getApplicationContext ();
+            CharSequence text = "El dispositivo no soporta Bluetooth";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText ( context, text, duration );
+            toast.show ();
+        }else{
+
+            if (!mBluetoothAdapter.isEnabled()) {
+                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+            }
+            connected = true;
         }
 
     }
@@ -100,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
           //SE EJECUTA AL HACER CLICK EN UNO DE LOS ELEMENTOS DE LA LISTA
 
 
-            \        }
+                    }
     };
 
     /*  @Override
@@ -135,16 +146,25 @@ public class MainActivity extends AppCompatActivity {
 */
 
     public void connect() {
-        Context context = getApplicationContext();
-        CharSequence text = "CONECTADO!";
-        int duration = Toast.LENGTH_SHORT;
+        if(connected) {
+            Context context = getApplicationContext ();
+            CharSequence text = "CONECTADO!";
+            int duration = Toast.LENGTH_SHORT;
 
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+            Toast toast = Toast.makeText ( context, text, duration );
+            toast.show ();
 
 
-        Intent intent = new Intent ( this,  act_select_mode.class ) ;
-        startActivity ( intent );
+            Intent intent = new Intent ( this, act_select_mode.class );
+            startActivity ( intent );
 
+        }else{
+            Context context = getApplicationContext ();
+            CharSequence text = "Error - No conectado";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText ( context, text, duration );
+            toast.show ();
+        }
     }
 }

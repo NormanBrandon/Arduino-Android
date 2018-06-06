@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Proyecto_Arduino</string>
     <string name="control_remoto">Control Remoto</string>
+    <string name="title_activity_settings">Settings</string>
 </resources>

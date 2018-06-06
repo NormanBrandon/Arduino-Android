@@ -23,6 +23,15 @@ public class act_select_mode extends AppCompatActivity {
             }
         } );
 
+        Button btn_settings = (Button)findViewById ( R.id.btn_settings );
+
+        btn_settings.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                toSettings();
+            }
+        } );
+
         Button btn_auto = (Button)findViewById ( R.id.btn_auto );
 
         btn_auto.setOnClickListener ( new View.OnClickListener () {
@@ -50,6 +59,11 @@ public class act_select_mode extends AppCompatActivity {
             }
         } );
 
+    }
+
+    private void toSettings() {
+        Intent intent = new Intent ( this,  settings.class ) ;
+        startActivity ( intent );
     }
 
     private void toDrive() {

@@ -2,7 +2,10 @@
 <resources>
     <color name="colorPrimary">#3f51b5</color>
     <color name="colorPrimaryDark">#040616</color>
-    <color name="colorAccent">#b67bbbd9</color>
+    <color name="colorAccent">#b6047db6</color>
     <color name="colorbuttontext">#f9f6e7e9</color>
     <color name="colorbutton">#a1f0ec15</color>
+    <color name="acc2">#d942c95d</color>
+    <color name="acc">#d9ef4853</color>
+    <color name="acc3">#cac9d51f</color>
 </resources>

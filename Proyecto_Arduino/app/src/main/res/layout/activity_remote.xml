@@ -8,41 +8,98 @@
     tools:context=".remote">
 
 
+    <Button
+        android:id="@+id/btn_remo_horn2"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:alpha=".99"
+
+        android:background="@drawable/button_horn1"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+
+        android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.792"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_remo_horn3"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:alpha=".99"
+
+        android:background="@drawable/button_horn3"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+
+        android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_remo_horn1"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:alpha=".99"
+
+        android:background="@drawable/button_horn2"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+
+        android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_backremo"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_back2"
+        android:layout_width="57dp"
+        android:layout_height="33dp"
+        android:alpha=".70"
 
-        android:hint="Salir"
+        android:background="@drawable/button_back_back"
         android:textColor="@color/colorbuttontext"
         android:textColorHint="@color/colorbuttontext"
-        android:textSize="40px"
 
+        android:textSize="40px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
 
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.863"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="282dp"
         android:layout_height="41dp"
+        android:alpha=".9"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo3"
-        tools:ignore="MissingConstraints"
 
-        />
+        tools:ignore="MissingConstraints" />
 
 
 </android.support.constraint.ConstraintLayout>

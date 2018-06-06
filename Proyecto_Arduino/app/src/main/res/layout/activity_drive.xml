@@ -7,37 +7,97 @@
     android:background="@drawable/wallpaper_driv"
     tools:context=".drive">
 
+    <Button
+        android:id="@+id/btn_driv_horn2"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:alpha=".99"
+
+        android:background="@drawable/button_horn1"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+
+        android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="239dp"
-        android:layout_height="22dp"
-        android:layout_x="0dp"
-        android:layout_y="0dp"
-        app:srcCompat="@drawable/logo2"
-        tools:layout_editor_absoluteX="386dp"
-        tools:layout_editor_absoluteY="287dp"
+        android:id="@+id/imageView5"
+        android:layout_width="236dp"
+        android:layout_height="30dp"
+        android:alpha=".9"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.985"
+        app:srcCompat="@drawable/logo3"
+
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_driv_horn1"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:alpha=".99"
+
+        android:background="@drawable/button_horn2"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+
+        android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_driv_horn3"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:alpha=".99"
+
+        android:background="@drawable/button_horn3"
+        android:textColor="@color/colorbuttontext"
+        android:textColorHint="@color/colorbuttontext"
+
+        android:textSize="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_backdriv"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:background="@drawable/button_back2"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:alpha=".8"
 
-        android:hint="Salir"
+        android:background="@drawable/button_back_back"
         android:textColor="@color/colorbuttontext"
         android:textColorHint="@color/colorbuttontext"
-        android:textSize="40px"
 
+        android:textSize="40px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintVertical_bias="0.901"
         tools:ignore="MissingConstraints" />
-
-
 
 
 </android.support.constraint.ConstraintLayout>

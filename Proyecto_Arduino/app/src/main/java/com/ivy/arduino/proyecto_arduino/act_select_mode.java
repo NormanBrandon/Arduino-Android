@@ -6,7 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 public class act_select_mode extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +78,7 @@ public class act_select_mode extends AppCompatActivity {
     }
 
     private void toFollow() {
+
         Intent intent = new Intent ( this,  act_follow.class ) ;
         startActivity ( intent );
     }

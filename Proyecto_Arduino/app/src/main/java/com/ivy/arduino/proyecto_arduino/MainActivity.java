@@ -2,6 +2,7 @@ package com.ivy.arduino.proyecto_arduino;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,18 +16,44 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.bluetooth.BluetoothDevice;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Set;
+import java.util.UUID;
+import java.util.zip.CheckedOutputStream;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_ENABLE_BT = 0;
     private static final int REQUEST_DISCOVERABLE_BT = 0;
+
     final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     private Set pairedDevices;
     ListView devicelist;
     Boolean connected = false;
+    BluetoothDevice robott;
+    ArrayList <String> direc = new ArrayList<String >();
+
+   public InputStream indata;
+   public OutputStream outdata;
+
+    public  InputStream getIndata() {
+        return indata;
+    }
+
+    public OutputStream getOutdata() {
+        return outdata;
+    }
+
+    private static final UUID PORT_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    // String for MAC address
+    private static String address = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
             {
                 BluetoothDevice bd = (BluetoothDevice)bt;
                 list.add(bd.getName() + "\n" + bd.getAddress()); //Get the device's name and the address
+                direc.add(bd.getAddress());
+
+                //98:D3:32:70:64:B0
+                if(bd.getAddress().equals("98:D3:32:70:64:B0")){
+                    robott =bd;
+                }
             }
         }
         else
@@ -108,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
     {
         public void onItemClick (AdapterView av, View v, int arg2, long arg3)
         {
-          //SE EJECUTA AL HACER CLICK EN UNO DE LOS ELEMENTOS DE LA LISTA
 
 
                     }
@@ -147,6 +179,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void connect() {
         if(connected) {
+
+            /*
+            try {
+
+            BluetoothSocket socket = null;
+                socket = robott.createRfcommSocketToServiceRecord(PORT_UUID);
+
+                socket.connect();
+
+                outdata= socket.getOutputStream();
+
+                indata =socket.getInputStream();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+*/
             Context context = getApplicationContext ();
             CharSequence text = "CONECTADO!";
             int duration = Toast.LENGTH_SHORT;
@@ -154,9 +202,17 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText ( context, text, duration );
             toast.show ();
 
+            //98:D3:32:70:64m=socket.getInputStr:B0
+
+
 
             Intent intent = new Intent ( this, act_select_mode.class );
             startActivity ( intent );
+
+            /*Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+            discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+            startActivity(discoverableIntent);
+            */
 
         }else{
             Context context = getApplicationContext ();

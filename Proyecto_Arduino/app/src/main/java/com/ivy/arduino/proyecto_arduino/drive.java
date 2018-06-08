@@ -51,14 +51,21 @@ public class drive extends AppCompatActivity {
 
     public void horn2() {
         //le manda al arduino una sola nota / sonido
+        MyConexionBT.write("E");
+
     }
 
     public void horn3() {
         //manda una tonada al arduino
+        MyConexionBT.write("F");
+
     }
+
 
     public void horn1() {
         //manda una mentada xd
+        MyConexionBT.write("G");
+
     }
 
     public void back() {

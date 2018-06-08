@@ -9,7 +9,8 @@ import android.widget.Button;
 public class drive extends AppCompatActivity {
 
     // android:screenOrientation="landscape" ---- manifest
-
+    ConnectedThread MyConexionBT;
+    Bundle conexion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -46,31 +47,54 @@ public class drive extends AppCompatActivity {
                 back();
             }
         } );
+        Intent intent = getIntent();
+        //Consigue la direccion MAC desde DeviceListActivity via EXTRA
+        String address = intent.getStringExtra(act_select_mode.EXTRA_DEVICE_ADDRESS);//<-<- PARTE A MODIFICAR >->->
+        //<-<- PARTE A MODIFICAR >->->
+        //Setea la direccion MAC
+        MyConexionBT = new ConnectedThread(address);
+        MyConexionBT.conectar();
+        MyConexionBT.start();
 
     }
 
     public void horn2() {
         //le manda al arduino una sola nota / sonido
+
+
         MyConexionBT.write("E");
 
     }
 
     public void horn3() {
         //manda una tonada al arduino
-        MyConexionBT.write("F");
+       MyConexionBT.write("F");
 
     }
 
 
     public void horn1() {
-        //manda una mentada xd
+        //manda una mentada x
         MyConexionBT.write("G");
 
     }
 
-    public void back() {
-        Intent intent = new Intent ( this,  act_select_mode.class ) ;
-        startActivity ( intent );
+    public void back(){
+        finish();
 
     }
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        MyConexionBT.desconectar();
+
+    }
+    public void onDestroy() {
+        super.onDestroy();
+
+        MyConexionBT.desconectar();
+
+    }
+
 }

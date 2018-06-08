@@ -22,9 +22,8 @@ public class settings extends AppCompatActivity {
         } );
     }
 
-    public void back() {
-        Intent intent = new Intent ( this,  act_select_mode.class ) ;
-        startActivity ( intent );
+    public void back(){
+        finish();
 
     }
 }

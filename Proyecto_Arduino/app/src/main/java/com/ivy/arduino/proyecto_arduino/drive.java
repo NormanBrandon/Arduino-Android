@@ -10,7 +10,6 @@ public class drive extends AppCompatActivity {
 
     // android:screenOrientation="landscape" ---- manifest
     ConnectedThread MyConexionBT;
-    Bundle conexion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );

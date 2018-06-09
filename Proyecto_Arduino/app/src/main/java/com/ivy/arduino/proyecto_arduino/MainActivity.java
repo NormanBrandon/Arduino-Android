@@ -2,8 +2,6 @@ package com.ivy.arduino.proyecto_arduino;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothSocket;
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,21 +9,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.bluetooth.BluetoothDevice;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.Socket;
-import java.util.AbstractList;
-import java.util.ArrayList;
 import java.util.Set;
-import java.util.UUID;
-import java.util.zip.CheckedOutputStream;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -63,17 +50,9 @@ public class MainActivity extends AppCompatActivity {
         // Obtiene el adaptador local Bluetooth adapter
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
 
-        //------------------- EN CASO DE ERROR -------------------------------------
-        //SI OBTIENES UN ERROR EN LA LINEA (BluetoothDevice device : pairedDevices)
-        //CAMBIA LA SIGUIENTE LINEA POR
         Set <BluetoothDevice> pairedDevices = mBtAdapter.getBondedDevices();
-        //------------------------------------------------------------------------------
 
-        // Obtiene un conjunto de dispositivos actualmente emparejados y agregua a 'pairedDevices'
-        //
-
-        //Set pairedDevices = mBtAdapter.getBondedDevices();
-
+        // Obtiene un conjunto de dispositivos actualmente emparejados y agregua a 'pairedDevices
         // Adiciona un dispositivos previo emparejado al array
         if (pairedDevices.size() > 0)
         {

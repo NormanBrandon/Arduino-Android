@@ -1,5 +1,5 @@
-LDR1 ----> A1
-LDR2 ----> A2
+LDRIzquierda ----> A1
+LDRDerecha ----> A2
 TERMISTOR ----> A3
 DHT11 ----> D2
 BUZZER ----> A0

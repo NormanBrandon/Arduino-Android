@@ -60,14 +60,14 @@ public class drive extends AppCompatActivity {
             }
         } );
 
-        h1.setOnClickListener ( new View.OnClickListener () {
+        h2.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
                 horn2();
             }
         } );
 
-        h2.setOnClickListener ( new View.OnClickListener () {
+        h3.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
                 horn3();
@@ -103,7 +103,7 @@ public class drive extends AppCompatActivity {
         //le manda al arduino una sola nota / sonido
 
 
-        MyConexionBT.write("B");
+        MyConexionBT.write("D");
 
     }
 
@@ -120,7 +120,7 @@ public class drive extends AppCompatActivity {
         //le manda al arduino una sola nota / sonido
 
 
-        MyConexionBT.write("D");
+        MyConexionBT.write("B");
 
     }
 
@@ -142,6 +142,8 @@ public class drive extends AppCompatActivity {
     }
 
     public void back(){
+        MyConexionBT.write("R");
+        MyConexionBT.desconectar();
         finish();
 
     }
@@ -149,13 +151,18 @@ public class drive extends AppCompatActivity {
     public void onPause()
     {
         super.onPause();
+        MyConexionBT.write("R");
         MyConexionBT.desconectar();
+        finish();
+
 
     }
     public void onDestroy() {
         super.onDestroy();
 
+        MyConexionBT.write("R");
         MyConexionBT.desconectar();
+        finish();
 
     }
 

@@ -125,6 +125,8 @@ public class act_select_mode extends AppCompatActivity implements Serializable{
         intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
 
         MyConexionBT.write("S");
+        MyConexionBT.desconectar();
+
         startActivity ( intent );
 
     }
@@ -133,6 +135,8 @@ public class act_select_mode extends AppCompatActivity implements Serializable{
         Intent intent = new Intent ( this,  act_auto.class ) ;
         intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
         MyConexionBT.write("U");
+        MyConexionBT.desconectar();
+
         startActivity ( intent );
 
     }
@@ -141,6 +145,8 @@ public class act_select_mode extends AppCompatActivity implements Serializable{
         Intent intent = new Intent ( this,  remote.class ) ;
         intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
         MyConexionBT.write("X");
+        MyConexionBT.desconectar();
+
         startActivity ( intent );
 
     }

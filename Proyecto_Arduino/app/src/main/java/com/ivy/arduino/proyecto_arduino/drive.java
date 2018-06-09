@@ -143,7 +143,7 @@ public class drive extends AppCompatActivity {
         MyConexionBT.start();
 
     }
-    private class AsyncTaskCounter extends AsyncTask<Void, Void, Void> {
+    public class AsyncTaskCounter extends AsyncTask<Void, Void, Void> {//clase para enviar repediamente los datos alv
 
         @Override
         protected Void doInBackground(Void... arg0) {

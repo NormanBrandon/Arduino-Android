@@ -13,6 +13,7 @@ public class settings extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_settings );
         Button btn_conn = (Button)findViewById ( R.id.btn_backsett);
+        ConnectedThread MyConexionBT;
 
         btn_conn.setOnClickListener ( new View.OnClickListener () {
             @Override

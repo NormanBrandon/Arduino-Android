@@ -13,6 +13,7 @@ public class act_auto extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_auto );
         Button btn_conn = (Button)findViewById ( R.id.btn_backauto);
+        ConnectedThread MyConexionBT;
 
         btn_conn.setOnClickListener ( new View.OnClickListener () {
             @Override

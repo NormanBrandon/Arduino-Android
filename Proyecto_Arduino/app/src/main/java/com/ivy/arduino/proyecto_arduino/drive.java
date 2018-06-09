@@ -1,13 +1,16 @@
 package com.ivy.arduino.proyecto_arduino;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
 public class drive extends AppCompatActivity {
-
+    private boolean presionado = false;
+    private String flecha;
     // android:screenOrientation="landscape" ---- manifest
     ConnectedThread MyConexionBT;
     @Override
@@ -19,39 +22,89 @@ public class drive extends AppCompatActivity {
         Button h2 = (Button)findViewById ( R.id.btn_driv_horn2 );
         Button h3 = (Button)findViewById ( R.id.btn_driv_horn3 );
 
-        Button up = (Button)findViewById ( R.id.up ) ;
+        final Button up = (Button)findViewById ( R.id.up ) ;
         Button right = (Button)findViewById ( R.id.right ) ;
         Button left = (Button)findViewById ( R.id.left ) ;
         Button down = (Button)findViewById ( R.id.down ) ;
 
 
-        up.setOnClickListener ( new View.OnClickListener () {
+        up.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                up();
+            public boolean onTouch(View v, MotionEvent event) {
+                flecha="arriba";
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        if (!presionado) {
+                            presionado = true;
+                            //AsyncTask que ejecuta Tarea.
+                            new AsyncTaskCounter().execute();
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        presionado = false;
+                        break;
+                }
+                return true;
             }
-        } );
+        });
+        down.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                flecha="abajo";
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        if (!presionado) {
+                            presionado = true;
+                            //AsyncTask que ejecuta Tarea.
+                            new AsyncTaskCounter().execute();
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        presionado = false;
+                        break;
+                }
+                return true;
+            }
+        });
+        left.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                flecha="izquierda";
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        if (!presionado) {
+                            presionado = true;
+                            //AsyncTask que ejecuta Tarea.
+                            new AsyncTaskCounter().execute();
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        presionado = false;
+                        break;
+                }
+                return true;
+            }
+        });
+        right.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                flecha="derecha";
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        if (!presionado) {
+                            presionado = true;
+                            //AsyncTask que ejecuta Tarea.
+                            new AsyncTaskCounter().execute();
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        presionado = false;
+                        break;
+                }
+                return true;
+            }
+        });
 
-        right.setOnClickListener ( new View.OnClickListener () {
-            @Override
-            public void onClick(View v) {
-                right();
-            }
-        } );
-
-        left.setOnClickListener ( new View.OnClickListener () {
-            @Override
-            public void onClick(View v) {
-                left();
-            }
-        } );
-
-        down.setOnClickListener ( new View.OnClickListener () {
-            @Override
-            public void onClick(View v) {
-                down();
-            }
-        } );
 
         h1.setOnClickListener ( new View.OnClickListener () {
             @Override
@@ -88,6 +141,43 @@ public class drive extends AppCompatActivity {
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
         MyConexionBT.start();
+
+    }
+    private class AsyncTaskCounter extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            while(presionado) {
+                envio();
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+
+                }
+            }
+            return null;
+        }
+        protected void envio(){
+            switch(flecha){
+                case "arriba":
+                    up();
+                    break;
+                case "derecha":
+                    right();
+                    break;
+                case "izquierda":
+                    left();
+                    break;
+                case "abajo":
+                    down();
+                    break;
+
+
+
+            }
+        }
+
+
 
     }
 

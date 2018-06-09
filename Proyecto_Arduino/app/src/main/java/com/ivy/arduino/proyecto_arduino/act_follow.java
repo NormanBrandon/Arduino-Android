@@ -13,6 +13,7 @@ public class act_follow extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_follow );
         Button btn_conn = (Button)findViewById ( R.id.btn_backfollow);
+        ConnectedThread MyConexionBT;
 
         btn_conn.setOnClickListener ( new View.OnClickListener () {
             @Override

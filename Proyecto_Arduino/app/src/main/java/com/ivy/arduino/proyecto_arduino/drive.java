@@ -19,6 +19,40 @@ public class drive extends AppCompatActivity {
         Button h2 = (Button)findViewById ( R.id.btn_driv_horn2 );
         Button h3 = (Button)findViewById ( R.id.btn_driv_horn3 );
 
+        Button up = (Button)findViewById ( R.id.up ) ;
+        Button right = (Button)findViewById ( R.id.right ) ;
+        Button left = (Button)findViewById ( R.id.left ) ;
+        Button down = (Button)findViewById ( R.id.down ) ;
+
+
+        up.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                up();
+            }
+        } );
+
+        right.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                right();
+            }
+        } );
+
+        left.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                left();
+            }
+        } );
+
+        down.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                down();
+            }
+        } );
+
         h1.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
@@ -57,11 +91,36 @@ public class drive extends AppCompatActivity {
 
     }
 
-    public void horn2() {
+    public void up() {
         //le manda al arduino una sola nota / sonido
 
 
-        MyConexionBT.write("E");
+        MyConexionBT.write("A");
+
+    }
+
+    public void right() {
+        //le manda al arduino una sola nota / sonido
+
+
+        MyConexionBT.write("B");
+
+    }
+
+    public void left() {
+        //le manda al arduino una sola nota / sonido
+
+
+        MyConexionBT.write("C");
+
+    }
+
+
+    public void down() {
+        //le manda al arduino una sola nota / sonido
+
+
+        MyConexionBT.write("D");
 
     }
 
@@ -70,7 +129,11 @@ public class drive extends AppCompatActivity {
        MyConexionBT.write("F");
 
     }
+    public void horn2() {
+        //manda una tonada al arduino
+        MyConexionBT.write("E");
 
+    }
 
     public void horn1() {
         //manda una mentada x

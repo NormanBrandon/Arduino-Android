@@ -21,20 +21,19 @@
         android:id="@+id/btn_remote"
         android:layout_width="305dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
         android:alpha="0.75"
         android:background="@drawable/button_back2"
         android:hint="Control Remoto"
-        android:textColor="@color/colorbuttontext"
+        android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@android:color/black"
         android:textSize="40px"
-
-
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606"
+        app:layout_constraintVertical_bias="0.591"
         tools:ignore="MissingConstraints" />
 
 
@@ -43,41 +42,38 @@
 
         android:layout_width="305dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
         android:alpha="0.75"
         android:background="@drawable/button_back2"
         android:hint="Seguimiento de luz"
-        android:textColor="@color/colorbuttontext"
+        android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@android:color/black"
         android:textSize="40px"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_bias="0.73"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_auto"
         android:layout_width="305dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-
         android:alpha="0.75"
         android:background="@drawable/button_back2"
         android:hint="Piloto Automático"
-        android:textColor="@color/colorbuttontext"
+        android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@android:color/black"
         android:textSize="40px"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42"
+        app:layout_constraintVertical_bias="0.311"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -88,7 +84,7 @@
 
         android:alpha="0.75"
         android:background="@drawable/button_back2"
-        android:hint="Conducción"
+        android:hint="Conducción Volante"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@android:color/black"
         android:textSize="40px"
@@ -98,7 +94,7 @@
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256"
+        app:layout_constraintVertical_bias="0.446"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -132,10 +128,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925"
+        app:layout_constraintVertical_bias="0.884"
         tools:ignore="MissingConstraints" />
 
     <TextView

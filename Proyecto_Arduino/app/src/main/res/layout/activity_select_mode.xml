@@ -23,7 +23,7 @@
         android:layout_height="43dp"
         android:alpha="0.75"
         android:background="@drawable/button_back2"
-        android:hint="Control Remoto"
+        android:hint="Conduccion Volante"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@android:color/black"
         android:textSize="40px"
@@ -84,7 +84,7 @@
 
         android:alpha="0.75"
         android:background="@drawable/button_back2"
-        android:hint="Conducción Volante"
+        android:hint="Control Remoto"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@android:color/black"
         android:textSize="40px"

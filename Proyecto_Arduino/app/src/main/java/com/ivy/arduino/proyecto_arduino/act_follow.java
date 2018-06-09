@@ -29,7 +29,9 @@ public class act_follow extends AppCompatActivity {
         //Setea la direccion MAC
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
-        MyConexionBT.start();
+       // MyConexionBT.start();
+        MyConexionBT.write("S");
+
 
     }
 

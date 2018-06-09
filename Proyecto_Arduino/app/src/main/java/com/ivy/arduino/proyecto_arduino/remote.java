@@ -30,7 +30,7 @@ public class remote extends AppCompatActivity {
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         sensor=sensorManager.getDefaultSensor(sensor.TYPE_ACCELEROMETER);
         final TextView xt =(TextView)findViewById(R.id.textView12);
-        final TextView yt =(TextView)findViewById(R.id.textView13);
+
         final TextView zt =(TextView)findViewById(R.id.textView14);
 
         if (sensor==null){
@@ -46,32 +46,33 @@ public class remote extends AppCompatActivity {
                 y=event.values[1];
                 z=event.values[2];
 
-                mensaje="x " + x;
-                xt.setText(mensaje);
-                mensaje="y " + y;
-                yt.setText(mensaje);
-                mensaje="z " + z;
-                zt.setText(mensaje);
                 if(y<-3){
                     presionado=true;
                     flecha="izquierda";
+                    mensaje="Girando a la Izquierda...";
                 }
                 else if (y>3) {
                     presionado = true;
                     flecha = "derecha";
+                    mensaje="Girando a la Derecha....";
                 }
-                if(z<-3){
+                if(z<-1){
                     presionado=true;
                     flecha="abajo";
+                    mensaje="Retrocediendo...";
                 }
-                else if (z>3){
+                else if (z>5){
                     presionado=true;
                     flecha="arriba";
+                    mensaje="Avanzando...";
                 }
 
-                if(z>-3 && z<3 && y>-3 && y<3){
+                if(z>-1 && z<5 && y>-3 && y<3){
                     presionado=false;
+                    mensaje="Detenido";
                 }
+                xt.setText(mensaje);
+
 
             }
 
@@ -128,7 +129,9 @@ public class remote extends AppCompatActivity {
         //Setea la direccion MAC
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
-        MyConexionBT.start();
+   //     MyConexionBT.start();
+        MyConexionBT.write("X");
+
 
 
     }

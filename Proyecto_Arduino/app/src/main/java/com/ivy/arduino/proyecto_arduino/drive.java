@@ -140,7 +140,9 @@ public class drive extends AppCompatActivity {
         //Setea la direccion MAC
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
-        MyConexionBT.start();
+    //    MyConexionBT.start();
+        MyConexionBT.write("X");
+
 
     }
     public class AsyncTaskCounter extends AsyncTask<Void, Void, Void> {//clase para enviar repediamente los datos alv

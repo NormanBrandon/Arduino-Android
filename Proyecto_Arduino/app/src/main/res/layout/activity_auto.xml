@@ -12,15 +12,15 @@
         android:layout_width="340dp"
         android:layout_height="27dp"
         android:alpha=".8"
-        android:text="Sensor Y , DATOS"
+        android:text="Ajustar  distancia del sensor"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.706"
+        app:layout_constraintVertical_bias="0.725"
         tools:background="@drawable/text_back_blue"
         tools:ignore="MissingConstraints"
         tools:text="Ajustar  distancia del sensor" />
@@ -28,30 +28,64 @@
     <SeekBar
         android:id="@+id/bar_auto_distance"
         android:layout_width="296dp"
-        android:layout_height="25dp"
-        android:background="@drawable/seekbar_background4"
+        android:layout_height="23dp"
+        android:background="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596"
-        tools:background="@drawable/seekbar_background"
+        app:layout_constraintVertical_bias="0.836"
+        tools:background="@android:color/white"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/central"
         android:layout_width="362dp"
-        android:layout_height="42dp"
+        android:layout_height="46dp"
         android:alpha=".8"
-        android:text="Sensor Y , DATOS"
+        android:text="Distancia Frontal"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411"
+        app:layout_constraintVertical_bias="0.342"
+        tools:background="@drawable/text_back_blue"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/izquierdo"
+        android:layout_width="362dp"
+        android:layout_height="42dp"
+        android:alpha=".8"
+        android:text="Distancia Izquierda"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.185"
+        tools:background="@drawable/text_back_blue"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/derecho"
+        android:layout_width="362dp"
+        android:layout_height="42dp"
+        android:alpha=".8"
+        android:text="Distancia Derecha"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
         tools:background="@drawable/text_back_blue"
         tools:ignore="MissingConstraints" />
 
@@ -86,5 +120,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/distancia"
+        android:layout_width="157dp"
+        android:layout_height="29dp"
+        android:text="TextView"
+        android:textColorHint="@android:color/white"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="273dp" />
 
 </android.support.constraint.ConstraintLayout>

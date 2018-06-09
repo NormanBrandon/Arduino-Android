@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
+import java.io.StringReader;
 import java.util.UUID;
 
 public class ConnectedThread extends Thread implements Serializable
@@ -23,6 +24,8 @@ public class ConnectedThread extends Thread implements Serializable
     private BluetoothSocket btSocket = null;
     private StringBuilder DataStringIN = new StringBuilder();
     public String save="inicial";
+    String readMessage;
+
     //private ConnectedThread MyConexionBT;
     public int estado;
     // Identificador unico de servicio - SPP UUID
@@ -73,21 +76,24 @@ public class ConnectedThread extends Thread implements Serializable
 
     public void run()
     {
-        byte[] buffer = new byte[256];
+        byte[] buffer = new byte[1024];
         int bytes;
-
         // Se mantiene en modo escucha para determinar el ingreso de datos
-        while (true) {
-            try {
+            while(true){
+                try {
                 bytes = mmInStream.read(buffer);
-                String readMessage = new String(buffer, 0, bytes);
+                readMessage =new String(buffer, 0,bytes );;
                 // Envia los datos obtenidos hacia el evento via handler
-                bluetoothIn.obtainMessage(handlerState, bytes, -1, readMessage).sendToTarget();
+               // bluetoothIn.obtainMessage(handlerState, bytes, -1, readMessage).sendToTarget();
             } catch (IOException e) {
-                break;
-            }
-        }
+            }}
+
     }
+
+    public String getReadMessage() {
+        return readMessage;
+    }
+
     public void cerrar(){
 
 
@@ -120,6 +126,7 @@ public class ConnectedThread extends Thread implements Serializable
             //  finish();
         }
     }
+
     private BluetoothSocket createBluetoothSocket(BluetoothDevice device) throws IOException
     {
         //crea un conexion de salida segura para el dispositivo

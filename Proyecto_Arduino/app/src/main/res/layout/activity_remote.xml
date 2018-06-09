@@ -118,47 +118,17 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="107dp"
-        android:layout_height="66dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="224dp"
-        android:text="Values"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="191dp"
-        tools:layout_editor_absoluteY="65dp"
-        tools:textColorHint="@android:color/white" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="107dp"
-        android:layout_height="66dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="30dp"
-        android:text="Values"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="152dp"
-        tools:textColorHint="@android:color/white" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="107dp"
+        android:layout_width="282dp"
         android:layout_height="66dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="115dp"
+        android:layout_marginEnd="142dp"
         android:text="Values"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="28sp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="240dp"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="65dp"
         tools:textColorHint="@android:color/white" />
 
 </RelativeLayout>

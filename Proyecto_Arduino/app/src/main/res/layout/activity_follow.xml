@@ -14,46 +14,28 @@
         android:alpha=".9"
         android:text="Sensor Y , DATOS"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.638"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679"
+        app:layout_constraintVertical_bias="0.693"
         tools:background="@drawable/text_back_yellow"
         tools:ignore="MissingConstraints"
         tools:text="Ajustar sensibilidad luz" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="348dp"
-        android:layout_height="81dp"
-        android:alpha=".9"
-        android:text="Sensor Y , DATOS"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272"
-        tools:background="@drawable/text_back_yellow"
-        tools:ignore="MissingConstraints" />
 
     <SeekBar
         android:id="@+id/bar_follow_light"
         android:layout_width="368dp"
         android:layout_height="31dp"
-        android:background="@drawable/seekbar_background4"
+        android:background="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.518"
-        tools:background="@drawable/seekbar_background2"
+        tools:background="@android:color/white"
         tools:ignore="MissingConstraints" />
 
     <ImageView

@@ -87,7 +87,7 @@ public class act_select_mode extends AppCompatActivity implements Serializable{
         //Setea la direccion MAC
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
-        MyConexionBT.start();
+    //    MyConexionBT.start();
     }
 
 
@@ -102,19 +102,22 @@ public class act_select_mode extends AppCompatActivity implements Serializable{
     public void onPause()
     {
         super.onPause();
+
     }
 
 
 
     private void toSettings() {
         Intent intent = new Intent ( this,  settings.class ) ;
+        intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
+        MyConexionBT.desconectar();
         startActivity ( intent );
+
     }
 
     private void toDrive() {
         Intent intent = new Intent ( this,  drive.class ) ;
         intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
-        MyConexionBT.write("X");
         MyConexionBT.desconectar();
         startActivity ( intent );
     }
@@ -123,8 +126,6 @@ public class act_select_mode extends AppCompatActivity implements Serializable{
 
         Intent intent = new Intent ( this,  act_follow.class ) ;
         intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
-
-        MyConexionBT.write("S");
         MyConexionBT.desconectar();
 
         startActivity ( intent );
@@ -134,7 +135,6 @@ public class act_select_mode extends AppCompatActivity implements Serializable{
     private void toAuto() {
         Intent intent = new Intent ( this,  act_auto.class ) ;
         intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
-        MyConexionBT.write("U");
         MyConexionBT.desconectar();
 
         startActivity ( intent );
@@ -144,7 +144,6 @@ public class act_select_mode extends AppCompatActivity implements Serializable{
     private void toRemote() {
         Intent intent = new Intent ( this,  remote.class ) ;
         intent.putExtra(EXTRA_DEVICE_ADDRESS, address);
-        MyConexionBT.write("X");
         MyConexionBT.desconectar();
 
         startActivity ( intent );

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class act_auto extends AppCompatActivity {
     ConnectedThread MyConexionBT;
@@ -14,6 +15,9 @@ public class act_auto extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_auto );
         Button btn_conn = (Button)findViewById ( R.id.btn_backauto);
+        TextView frontal = (TextView)findViewById(R.id.central);
+        TextView izquierdo = (TextView)findViewById(R.id.izquierdo);
+        TextView derecho = (TextView)findViewById(R.id.derecho);
 
         btn_conn.setOnClickListener ( new View.OnClickListener () {
             @Override
@@ -28,7 +32,9 @@ public class act_auto extends AppCompatActivity {
         //Setea la direccion MAC
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
-        MyConexionBT.start();
+      //  MyConexionBT.start();
+        MyConexionBT.write("U");
+
 
     }
 

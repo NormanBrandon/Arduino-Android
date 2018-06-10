@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 public class remote extends AppCompatActivity {
     ConnectedThread MyConexionBT;
     private boolean presionado = false;
@@ -84,12 +83,6 @@ public class remote extends AppCompatActivity {
         start();
         Button btn_conn = (Button)findViewById ( R.id.btn_backremo);
 
-        btn_conn.setOnClickListener ( new View.OnClickListener () {
-            @Override
-            public void onClick(View v) {
-                back();
-            }
-        } );
 
         Button h1 = (Button)findViewById ( R.id.btn_remo_horn1 );
         Button h2 = (Button)findViewById ( R.id.btn_remo_horn2 );
@@ -197,7 +190,7 @@ public class remote extends AppCompatActivity {
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
-
+                    e.printStackTrace();
                 }
             }
             return null;

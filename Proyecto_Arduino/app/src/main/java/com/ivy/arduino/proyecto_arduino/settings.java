@@ -8,13 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 public class settings extends AppCompatActivity {
     ConnectedThread MyConexionBT;
     public TextView termistor;
     String mensaje="";
     int ascii;
-    boolean flag=false;
+    public boolean flag=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +33,21 @@ public class settings extends AppCompatActivity {
         actualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyConexionBT.write("L");
+
                 new AsyncTaskCounter().execute();
+                MyConexionBT.write("J");
+
+
+                if(ascii==36){
                 termistor.setText(mensaje);
                 mensaje="";
+
+            }
+
+
+
+
+
             }
         });
 
@@ -45,6 +55,8 @@ public class settings extends AppCompatActivity {
         String address = intent.getStringExtra(act_select_mode.EXTRA_DEVICE_ADDRESS);//<-<- PARTE A MODIFICAR >->->
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
+        MyConexionBT.write("L");
+
 
 
 
@@ -53,14 +65,15 @@ public class settings extends AppCompatActivity {
 
         @Override
         public Void doInBackground(Void... arg0) {
-            while(MyConexionBT.read()!=35){
-                ascii='#';
+            while(ascii!=35){
+                ascii=MyConexionBT.read();
             }
             while (ascii!=36) {
                 ascii = MyConexionBT.read();
                     mensaje = mensaje + (char) ascii;
             }
-        return null;
+
+            return null;
         }
 
     }

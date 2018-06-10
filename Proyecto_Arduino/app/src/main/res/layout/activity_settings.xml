@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,54 +9,6 @@
     tools:context=".settings">
    <!-- android:background="@drawable/wallpaper_gear1" -->
 
-
-    <TextView
-        android:id="@+id/derecho2"
-        android:layout_width="308dp"
-        android:layout_height="45dp"
-        android:text="Distancia Derecha"
-        android:textAlignment="center"
-        android:textColor="@color/colorbuttontext"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:alpha=".8"
-        tools:ignore="MissingConstraints" />
-
- <TextView
-     android:id="@+id/izquierdo2"
-     android:layout_width="308dp"
-     android:layout_height="45dp"
-     android:text="Distancia Izquierda"
-     android:textAlignment="center"
-     android:textColor="@color/colorbuttontext"
-     android:textSize="18sp"
-     app:layout_constraintBottom_toBottomOf="parent"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent"
-     app:layout_constraintVertical_bias="0.838"
-     tools:alpha=".8"
-     tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/central2"
-        android:layout_width="308dp"
-        android:layout_height="48dp"
-        android:text="Distancia Frontal"
-        android:textAlignment="center"
-        android:textColor="@color/colorbuttontext"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.669"
-        tools:alpha=".8"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_backsett"
@@ -79,58 +31,11 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/ldr1"
-        android:layout_width="313dp"
-        android:layout_height="44dp"
-        android:alpha=".9"
-        android:text="Fotoresistencia 1"
-        android:textAlignment="center"
-        android:textColor="@color/colorbuttontext"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/ldr2"
-        android:layout_width="308dp"
-        android:layout_height="45dp"
-        android:text="Fotoresistencia 2"
-        android:textAlignment="center"
-        android:textColor="@color/colorbuttontext"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:alpha=".8"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/dht11"
-        android:layout_width="261dp"
-        android:layout_height="44dp"
-        android:alpha=".8"
-        android:text="DHT11"
-        android:textAlignment="center"
-        android:textColor="@color/colorbuttontext"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
         android:id="@+id/termistor2"
         android:layout_width="261dp"
-        android:layout_height="44dp"
+        android:layout_height="261dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:alpha=".8"
         android:text="Termistor"
         android:textAlignment="center"
@@ -138,26 +43,20 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153"
+        app:layout_constraintVertical_bias="0.297"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-     android:id="@+id/textView"
-     android:layout_width="338dp"
-     android:layout_height="42dp"
-     android:layout_marginTop="4dp"
-     android:alpha=".95"
-     android:text="Informacion Sensores"
-     android:textAlignment="center"
-     android:textColor="@color/colorbuttontext"
-     android:textSize="30sp"
-     app:layout_constraintEnd_toEndOf="parent"
-     app:layout_constraintHorizontal_bias="0.501"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toTopOf="parent"
-     tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Actualizar Sensores"
+        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteY="237dp" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

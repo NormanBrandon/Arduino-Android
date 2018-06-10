@@ -53,7 +53,7 @@ public class UserInterfaz extends AppCompatActivity {
                     String readMessage = (String) msg.obj;
                     DataStringIN.append(readMessage);
 
-                    int endOfLineIndex = DataStringIN.indexOf("#");
+                    int endOfLineIndex = DataStringIN.indexOf("izquierdo");
 
                     if (endOfLineIndex > 0) {
                         String dataInPrint = DataStringIN.substring(0, endOfLineIndex);
@@ -79,8 +79,8 @@ public class UserInterfaz extends AppCompatActivity {
 
         IdApagar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                MyConexionBT.write("X");
-                MyConexionBT.write("A");
+                MyConexionBT.write("L");
+
             }
         });
 
@@ -95,6 +95,8 @@ public class UserInterfaz extends AppCompatActivity {
                 finish();
             }
         });
+
+
     }
 
     private BluetoothSocket createBluetoothSocket(BluetoothDevice device) throws IOException

@@ -18,13 +18,13 @@ public class ConnectedThread extends Thread implements Serializable
 {
     public InputStream mmInStream;
     public  OutputStream mmOutStream;
-    Handler bluetoothIn;
-    final int handlerState = 0;
+
     private BluetoothAdapter btAdapter = null;
     private BluetoothSocket btSocket = null;
-    private StringBuilder DataStringIN = new StringBuilder();
     public String save="inicial";
-    String readMessage;
+    public String readMessage;
+
+    public boolean flag;
 
     //private ConnectedThread MyConexionBT;
     public int estado;
@@ -39,6 +39,7 @@ public class ConnectedThread extends Thread implements Serializable
 
 
     public void conectar(){
+
         btAdapter = BluetoothAdapter.getDefaultAdapter(); // get Bluetooth adapter
         //  VerificarEstadoBT();
         BluetoothDevice device = btAdapter.getRemoteDevice(save);
@@ -70,25 +71,31 @@ public class ConnectedThread extends Thread implements Serializable
         mmOutStream = tmpOut;
 
 
+
     }
 
 
 
-    public void run()
+    public int read()
     {
-        byte[] buffer = new byte[1024];
-        int bytes;
-        // Se mantiene en modo escucha para determinar el ingreso de datos
-            while(true){
-                try {
-                bytes = mmInStream.read(buffer);
-                readMessage =new String(buffer, 0,bytes );;
-                // Envia los datos obtenidos hacia el evento via handler
-               // bluetoothIn.obtainMessage(handlerState, bytes, -1, readMessage).sendToTarget();
-            } catch (IOException e) {
-            }}
 
+        byte[] buffer = new byte[256];
+        int bytes=0;
+        // Se mantiene en modo escucha para determinar el ingreso de datos
+            try {
+                bytes = mmInStream.read();
+
+            } catch (IOException e) {
+            }
+
+        return bytes;
     }
+
+    public boolean getFlag() {
+        return flag;
+    }
+
+
 
     public String getReadMessage() {
         return readMessage;

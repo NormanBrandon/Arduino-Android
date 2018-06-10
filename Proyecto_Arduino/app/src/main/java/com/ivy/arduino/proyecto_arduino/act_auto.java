@@ -15,9 +15,7 @@ public class act_auto extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_auto );
         Button btn_conn = (Button)findViewById ( R.id.btn_backauto);
-        TextView frontal = (TextView)findViewById(R.id.central);
-        TextView izquierdo = (TextView)findViewById(R.id.izquierdo);
-        TextView derecho = (TextView)findViewById(R.id.derecho);
+        TextView distancia = (TextView)findViewById(R.id.derecho);
 
         btn_conn.setOnClickListener ( new View.OnClickListener () {
             @Override

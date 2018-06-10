@@ -39,45 +39,10 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/central"
-        android:layout_width="362dp"
-        android:layout_height="46dp"
-        android:alpha=".8"
-        android:text="Distancia Frontal"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342"
-        tools:background="@drawable/text_back_blue"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/izquierdo"
-        android:layout_width="362dp"
-        android:layout_height="42dp"
-        android:alpha=".8"
-        android:text="Distancia Izquierda"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185"
-        tools:background="@drawable/text_back_blue"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
         android:id="@+id/derecho"
-        android:layout_width="362dp"
+        android:layout_width="162dp"
         android:layout_height="42dp"
         android:alpha=".8"
-        android:text="Distancia Derecha"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="18sp"

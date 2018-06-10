@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+
 public class drive extends AppCompatActivity {
     private boolean presionado = false;
     private String flecha;
@@ -22,7 +23,7 @@ public class drive extends AppCompatActivity {
         Button h2 = (Button)findViewById ( R.id.btn_driv_horn2 );
         Button h3 = (Button)findViewById ( R.id.btn_driv_horn3 );
 
-        final Button up = (Button)findViewById ( R.id.up ) ;
+        Button up = (Button)findViewById ( R.id.up ) ;
         Button right = (Button)findViewById ( R.id.right ) ;
         Button left = (Button)findViewById ( R.id.left ) ;
         Button down = (Button)findViewById ( R.id.down ) ;
@@ -134,13 +135,9 @@ public class drive extends AppCompatActivity {
             }
         } );
         Intent intent = getIntent();
-        //Consigue la direccion MAC desde DeviceListActivity via EXTRA
         String address = intent.getStringExtra(act_select_mode.EXTRA_DEVICE_ADDRESS);//<-<- PARTE A MODIFICAR >->->
-        //<-<- PARTE A MODIFICAR >->->
-        //Setea la direccion MAC
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
-    //    MyConexionBT.start();
         MyConexionBT.write("X");
 
 

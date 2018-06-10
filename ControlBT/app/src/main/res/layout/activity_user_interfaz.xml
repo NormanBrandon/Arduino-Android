@@ -37,11 +37,12 @@
     <TextView
         android:id="@+id/IdBufferIn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="69dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="225dp"
-        android:text="Datos:" />
+        android:layout_marginBottom="196dp"
+        android:text="Datos:"
+        android:textColor="@android:color/black" />
 
     <Button
         android:id="@+id/IdDesconectar"

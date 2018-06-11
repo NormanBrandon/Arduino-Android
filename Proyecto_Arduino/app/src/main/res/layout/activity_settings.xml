@@ -37,7 +37,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:alpha=".8"
-        android:text="Termistor"
+        android:text="Actualize el valor de los sensores"
         android:textAlignment="center"
         android:textColor="@color/colorbuttontext"
         android:textSize="18sp"

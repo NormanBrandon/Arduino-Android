@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import java.io.Serializable;
-
 public class act_select_mode extends AppCompatActivity implements Serializable{
 
     //1)

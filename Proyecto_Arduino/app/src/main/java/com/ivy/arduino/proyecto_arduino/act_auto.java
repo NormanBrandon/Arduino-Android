@@ -5,32 +5,54 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class act_auto extends AppCompatActivity {
     ConnectedThread MyConexionBT;
+    int progressChangedValue = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_auto );
         Button btn_conn = (Button)findViewById ( R.id.btn_backauto);
-        TextView distancia = (TextView)findViewById(R.id.derecho);
-
+        final TextView distancia = (TextView)findViewById(R.id.derecho);
+        SeekBar simpleSeekBar1=(SeekBar) findViewById(R.id.bar_auto_distance); // initiate the progress bar
+        simpleSeekBar1.setMax(50); // 200 maximum value for the Seek bar
+        simpleSeekBar1.setProgress(30);
         btn_conn.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
                 back();
             }
         } );
+
+        simpleSeekBar1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressChangedValue = progress;
+                distancia.setText(progress + " cm");
+                MyConexionBT.write("K");
+                char s=(char)progress;
+                MyConexionBT.write(s + "");
+            }
+
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
         Intent intent = getIntent();
-        //Consigue la direccion MAC desde DeviceListActivity via EXTRA
         String address = intent.getStringExtra(act_select_mode.EXTRA_DEVICE_ADDRESS);//<-<- PARTE A MODIFICAR >->->
-        //<-<- PARTE A MODIFICAR >->->
-        //Setea la direccion MAC
         MyConexionBT = new ConnectedThread(address);
         MyConexionBT.conectar();
-      //  MyConexionBT.start();
         MyConexionBT.write("U");
 
 

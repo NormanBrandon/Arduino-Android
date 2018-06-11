@@ -151,7 +151,7 @@ public class drive extends AppCompatActivity {
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
-
+                    e.printStackTrace();
                 }
             }
             return null;

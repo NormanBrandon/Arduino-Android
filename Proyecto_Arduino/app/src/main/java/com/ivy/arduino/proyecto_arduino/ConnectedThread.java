@@ -13,6 +13,8 @@ import java.io.OutputStream;
 import java.io.Serializable;
 import java.io.StringReader;
 import java.util.UUID;
+import android.R;
+import android.R.*;
 
 public class ConnectedThread extends Thread implements Serializable
 {

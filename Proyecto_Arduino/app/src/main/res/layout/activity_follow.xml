@@ -90,7 +90,7 @@
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="91dp"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         tools:layout_editor_absoluteX="237dp"
